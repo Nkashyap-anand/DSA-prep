@@ -125,10 +125,10 @@ void deletePos(Node *&head, int pos)
     Node *temp = head;
     Node *prev = NULL;
 
-    int count = 0;
+    int count = 1;
 
     // if deleting head
-    if (pos == 0)
+    if (pos == 1)
     {
         head = temp->next;
         delete temp;
