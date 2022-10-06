@@ -20,6 +20,18 @@ void heapify(int arr[], int n, int i)
     }
 }
 
+void heapSort(int arr[], int n)
+{
+    int size = n;
+
+    while (size > 1)
+    {
+        swap(arr[1], arr[size]);
+        size--;
+        heapify(arr, size, 1);
+    }
+}
+
 int main()
 {
     int arr[6] = {-1, 54, 53, 55, 52, 50};
@@ -30,6 +42,16 @@ int main()
         heapify(arr, n, i);
     }
 
+    cout << "heap is : ";
+    for (int i = 0; i <= n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    heapSort(arr, n);
+
+    cout << "sorted heap is : ";
     for (int i = 0; i <= n; i++)
     {
         cout << arr[i] << " ";
