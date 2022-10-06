@@ -47,7 +47,7 @@ public:
         // step 2 : remove last element
         size--;
 
-        // step 3 : take root to its corrent position
+        // step 3 : take root to its correct position
         int i = 1;
         while (i < size)
         {
